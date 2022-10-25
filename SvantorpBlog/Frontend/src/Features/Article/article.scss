@@ -1,0 +1,9 @@
+.article-card-link {
+    display: grid;
+    grid-template-rows: repeat(2,50%);
+    height: 100%;
+}
+
+.article-main-img {
+    max-height: 400px;
+}

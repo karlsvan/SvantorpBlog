@@ -1,0 +1,37 @@
+nav {
+    display: flex;
+    height: 100%;
+    padding: 0 5px;
+    width: 55px;
+    overflow: hidden;
+    align-items: center;
+    border-right: 1px solid black;
+    transition: width 0.5s ease-out;
+
+    &:hover {
+        width: 130px;
+    }
+}
+
+.main-menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu-item {
+    padding-bottom: 20px;
+}
+
+.menu-link {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,50px);
+    grid-column-gap: 10px;
+
+    &>span {
+        grid-column: 2;
+        display: flex;
+        align-items: center;
+    }
+}

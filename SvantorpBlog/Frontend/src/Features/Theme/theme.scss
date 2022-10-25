@@ -1,0 +1,12 @@
+.theme-main-img {
+    max-height: 400px;
+}
+
+.theme-cards {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    grid-template-rows: repeat(auto-fill, 400px);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}

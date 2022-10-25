@@ -1,0 +1,15 @@
+﻿@using EPiServer.Web.Mvc.Html
+@using SvantorpBlog.Infrastructure.Optimizely
+
+@model SvantorpBlog.Features.MainMenu.Models.MainMenuBlock
+
+<nav>
+	@Html.PropertyFor(m => m.Pages,
+		new { 
+			Tag = GroupNames.Menu,
+			CustomTag = "ul",
+			CssClass = "main-menu-list",
+			ChildrenCustomTagName = "li",
+			ChildrenCssClass = "main-menu-item"
+		})
+</nav>

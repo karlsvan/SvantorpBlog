@@ -1,0 +1,15 @@
+﻿@page
+@using EPiServer.Web.Mvc.Html
+
+@model SvantorpBlog.Features.Article.Pages.ArticlepageModel
+@{
+	Layout = "/Features/Layout/Views/_Layout.cshtml";
+}
+<main>
+	<h1>@Model.CurrentContent.Title</h1>
+	<img class="article-main-img" src=@Url.ContentUrl(Model.CurrentContent.MainImage) />
+
+	<article>
+		@Html.PropertyFor(m => m.CurrentContent.MainBody)
+	</article>
+</main>

@@ -1,0 +1,12 @@
+﻿@using EPiServer.Web.Mvc.Html
+@model SvantorpBlog.Features.Theme.Models.ThemePage
+
+
+<a class="menu-link" href=@Url.ContentUrl(Model.ContentLink)>
+	@if(Model.Icon != null) {
+			<img src="@Url.ContentUrl(Model.Icon)"></img>
+	}
+	<span>
+		@Html.PropertyFor(m => m.Title)
+	</span>
+</a>

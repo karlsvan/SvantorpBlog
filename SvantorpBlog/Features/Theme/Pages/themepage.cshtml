@@ -1,0 +1,18 @@
+﻿@page
+@using EPiServer.Web.Mvc.Html
+@using SvantorpBlog.Infrastructure.Optimizely
+
+@model SvantorpBlog.Features.Theme.Pages.ThemepageModel
+@{
+		Layout = "/Features/Layout/Views/_Layout.cshtml";
+}
+<main>
+	<h1>@Model.CurrentContent.Title</h1>
+	<img class="theme-main-img" src=@Url.ContentUrl(Model.CurrentContent.MainImage) />
+
+	@Html.PropertyFor(m => m.CurrentContent.MainBody)
+
+	<ul class="theme-cards">
+		@Html.PropertyFor(m => m.childPages, new {Tag = GroupNames.Card})
+	</ul>
+</main>

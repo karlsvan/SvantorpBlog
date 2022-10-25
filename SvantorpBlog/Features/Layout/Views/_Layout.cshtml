@@ -1,0 +1,24 @@
+﻿@using EPiServer.Core;
+@using SvantorpBlog.Features.Common.Models
+
+@model SvantorpBlog.Features.Common.Models.ILayoutPage
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        @await Component.InvokeAsync("MainMenuComponent",Model.GetLayout().Menu)
+    </header>
+
+    @RenderBody()
+
+    <footer>
+    </footer>
+</body>
+</html>
